@@ -8,11 +8,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "BOOK")
+@NoArgsConstructor
 @Data
 public class Book {
   @Id
@@ -33,9 +34,9 @@ public class Book {
   private BigDecimal price;
 
   public Book(String title, Date date, int pages, BigDecimal price) {
-    this.setTitle(title);
-    this.setPublishDate(date);
-    this.setPageCount(pages);
-    this.setPrice(price);
+    this.title = title;
+    this.publishDate = date;
+    this.pageCount = pages;
+    this.price = price;
   }
 }

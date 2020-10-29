@@ -36,6 +36,7 @@ public class DataConfiguration {
     Properties jpaProperties = new Properties();
     jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
     jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
+    jpaProperties.put("hibernate.hbm2ddl.import_files", "init.sql");
 
     LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
     factoryBean.setDataSource(dataSource());

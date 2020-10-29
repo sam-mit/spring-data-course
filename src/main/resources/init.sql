@@ -1,0 +1,1 @@
+insert into book(book_id, title, publish_date, page_count, price) values (1, 'of Mice and men', '1954-11-08', 100.0, 11.0)
